@@ -1,0 +1,30 @@
+@startchen
+left to right direction
+
+entity Cinema {
+    No
+    Screen
+    Visitors
+    Location
+    Employees
+}
+entity Movie {
+    No
+    Duration
+    Genre
+    Actors
+}
+entity "Film Studios" as FS {
+    No
+    Name
+    Address
+}
+relationship shows {
+}
+relationship has {
+}
+Cinema -1- shows
+shows -N- Movie
+FS -1- has
+has -M- Movie
+@endchen
