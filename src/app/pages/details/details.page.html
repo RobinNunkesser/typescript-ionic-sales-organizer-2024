@@ -1,13 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      </ion-buttons>      
+    <ion-title>{{task.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Details</ion-title>
+      <ion-title size="large">{{task.title}}</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-button routerLink="/requests" routerDirection="forward">Status request</ion-button>
 </ion-content>

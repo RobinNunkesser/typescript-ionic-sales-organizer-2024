@@ -13,5 +13,15 @@
       <ion-title size="large">List</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-button routerLink="/details" routerDirection="forward">Show details</ion-button> 
+
+  <ion-item *ngFor="let task of tasks" [routerLink]="['/details',task]" routerDirection="forward">
+    {{task.title}}
+  </ion-item>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addTask()">
+     <ion-icon name="add"></ion-icon>
+     </ion-fab-button>
+    </ion-fab> 
+    
 </ion-content>
